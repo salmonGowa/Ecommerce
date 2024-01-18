@@ -1,5 +1,35 @@
 {% extends "base.html" %}
 {% block title %}Home{% endblock title %}
+{% block contentent %}
+
+<form action="/authapp/signup" method="post"> {% csrf_token %}
+
+    <label for ="email">Email</label>
+    <div class="form-group">
+        <input type="email" class="form-control" id="email" name="email" required>
+    </div>
+
+    <label for ="pass1">Password</label>
+    <div class="form-group">
+        <input type="password" class="form-control" id="pass1" name="pass1" required>
+    </div>
+
+    <label for ="pass2">Confirm Password</label>
+    <div class="form-group">
+        <input type="password" class="form-control" id="pass2" name="pass2" required>
+    </div>
+
+    <button type="submit" class="btn" >SignUp</button>
+    <br><br>
+
+    <p>Already Have an account?<a href="login.html">Login</a></p>
+
+
+
+</form>
+
+
+{% endblock contentent %}
 
 {% block body %}
 

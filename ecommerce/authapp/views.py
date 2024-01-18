@@ -3,10 +3,10 @@ from django.shortcuts import render,redirect
 # Create your views here.
 
 def handlesignup(request):
-    return render(request,"authentications/signup.html")
+    return render(request,"signup.html")
 
 def handlelogin(request):
-    return render(request,"authentications/login.html")
+    return render(request,"login.html")
 
 def handlelogout(request):
     return redirect("/authapp/login")
