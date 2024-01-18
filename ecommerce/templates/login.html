@@ -1,0 +1,26 @@
+
+{% extends "base.html" %}
+
+
+{% block body %}
+
+<form action="/authapp/login/" method="post"> {% csrf_token %}
+
+    <label for ="email">Email</label>
+    <div class="form-group">
+        <input type="email" class="form-control" id="email" name="email" required>
+    </div>
+
+    <label for ="pass1">Password</label>
+    <div class="form-group">
+        <input type="password" class="form-control" id="pass1" name="pass1" required>
+    </div>
+
+   
+
+    <button type="submit" class="btn" >Login</button>
+    <br><br>
+
+    <p>Don't Have an account?<a href="/authapp/signup">Sigup</a></p>
+
+{% endblock body %}
