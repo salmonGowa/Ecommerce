@@ -1,4 +1,4 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render,redirect,HttpResponse
 
 from django.contrib.auth.models import User
 
@@ -12,12 +12,13 @@ def handlesignup(request):
 
         if password!=confirmpassword:
             #messages.warning(request,"Passwords dint match")
-            return render(request,'authapp/signup,html')
+            return render(request,'signup.html')
+            
 
         try:
             if User.objects.get(username=email):
                 #messages.warning(request,"Email already exists!")
-                return render(request,'authapp/signup.html')
+                return render(request,'signup.html')
         except Exception as identifier:
             pass
 

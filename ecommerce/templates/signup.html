@@ -1,5 +1,9 @@
-{% extends "base.html" %} {% block title %}SIGNUP{% endblock title %} 
-{% block content %}
+{% extends "base.html" %}
+
+{% block title %}SIGNUP{% endblock title %} 
+
+
+{% block body %}
 
 <div class="card bg-light p-5">
     <form action="/authapp/signup/" method="post"> {% csrf_token %}
@@ -27,6 +31,6 @@
 </div>
 
 
-{% endblock content %}
+{% endblock body %}
 
 

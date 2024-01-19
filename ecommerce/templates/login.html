@@ -1,8 +1,10 @@
 
 {% extends "base.html" %}
 
+{% block title %}
+Login
+{% endblock title %}
 
-{% block body %}
 
 <form action="/authapp/login/" method="post"> {% csrf_token %}
 
@@ -23,4 +25,4 @@
 
     <p>Don't Have an account?<a href="/authapp/signup">Sigup</a></p>
 
-{% endblock body %}
+
